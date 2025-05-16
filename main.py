@@ -22,14 +22,9 @@ def main():
     print(args)
 
     try:
-        print("Checking if user has sudo privileges...")
         check_sudo()
-        print("User has sudo privileges, continuing...")
-        print("Checking if Nginx is installed...")
         if not is_nginx_installed():
-            print("Nginx is not installed, exiting...")
             exit(1)
-        print("Nginx is installed, continuing...")
     except Exception as e:
         print(e)
         exit(1)

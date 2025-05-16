@@ -31,10 +31,5 @@ def add_nginx_config(domains: list[str], port: int):
             f"sudo ln -s /etc/nginx/sites-available/{domain} /etc/nginx/sites-enabled/{domain}"
         )
 
-    print("Nginx config added successfully.")
-    print("Restarting Nginx.")
     restart_nginx()
-    print("Nginx restarted successfully.")
-    print("Testing Nginx.")
     test_nginx()
-    print("Nginx tested successfully.")
