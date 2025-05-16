@@ -1,3 +1,6 @@
+> [!WARNING]  
+> Taksim is still in development. It is not ready for production use, be careful when using it.
+
 ## Taksim
 
 Taksim is a tool for setting up Nginx with SSL certificates with ease.
