@@ -23,12 +23,12 @@ def add_nginx_config(domains: list[str], port: int):
 }}"""
 
     for domain in domains:
-        config_path = f"/etc/nginx/sites-available/{domain}"
+        config_path = f"/etc/nginx/sites-available/{domain.replace('.', '-')}"
         with open(config_path, "w") as f:
             f.write(config_template)
 
         os.system(
-            f"sudo ln -s /etc/nginx/sites-available/{domain} /etc/nginx/sites-enabled/{domain}"
+            f"sudo ln -s /etc/nginx/sites-available/{domain.replace('.', '-')} /etc/nginx/sites-enabled/{domain.replace('.', '-')}"
         )
 
     restart_nginx()
