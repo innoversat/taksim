@@ -1,0 +1,19 @@
+[project]
+name = "taksim"
+version = "0.1.0"
+description = "Taksim is a tool for setting up Nginx with SSL certificates with ease."
+readme = "README.md"
+entry-points = { taksim = { module = "taksim.main", script = "taksim" } }
+requires-python = ">=3.10"
+dependencies = []
+authors = [
+  { name="Onur Ravli", email="onur@innoversat.com" }
+]
+license = { file = "LICENSE" }
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+]
+urls = { "Bug Tracker" = "https://github.com/innoversat/taksim/issues", "Source" = "https://github.com/innoversat/taksim" }
