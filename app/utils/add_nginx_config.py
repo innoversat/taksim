@@ -5,7 +5,7 @@ from app.utils.test_nginx import test_nginx
 
 def add_nginx_config(domains: list[str], port: int):
     config_template = f"""server {{
-    listen {port};
+    listen 80;
     server_name {" ".join(domains)};
 
     location /.well-known/acme-challenge/ {{
